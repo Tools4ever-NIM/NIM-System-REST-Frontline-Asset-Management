@@ -1,0 +1,278 @@
+{
+    "schema": {
+        "options": {},
+        "crud_objects": {
+            "Entities": {
+                "operations": {
+                    "EntitiesList": {
+                        "method": "get",
+                        "call": {
+                            "mode": "iteration",
+                            "table": "Tags",
+                            "iterator": "entityID",
+                            "path": "/api/StaffStudent/GetEntityInformation/{iterator}/{entityTypeId}"
+                        },
+                        "processing_options": {
+                            "output_field": "result"
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "entityID",
+                "resources": {
+                    "entityID": "string*",
+                    "entityUID": "string*",
+                    "siteName": "string*",
+                    "firstName": "string*",
+                    "middleName": "string*",
+                    "lastName": "string*",
+                    "fullName": "string*",
+                    "grade": "string*",
+                    "homeRoom": "string*",
+                    "address": "string*",
+                    "address2": "string*",
+                    "city": "string*",
+                    "zip": "string*",
+                    "email": "string*"
+                }
+            },
+            "FundingSources": {
+                "operations": {
+                    "FundingSourcesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/Integrations/Funding/GetFundingSources"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "fundingSourceID",
+                "resources": {
+                    "fundingSourceID": "string*",
+                    "fundingDescription": "string*"
+                }
+            },
+            "Products": {
+                "operations": {
+                    "ProductsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/Integrations/Products/GetAllProducts"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "productNumber",
+                "resources": {
+                    "productNumber": "string*",
+                    "productName": "string*e",
+                    "productDescription": "string*",
+                    "productType": "string*",
+                    "model": "string*",
+                    "manufacturer": "string*",
+                    "suggestedPrice": "string*",
+                    "notes": "string*",
+                    "sku": "string*",
+                    "projectedLife": "string*",
+                    "customField1": "string*",
+                    "customField2": "string*",
+                    "customField3": "string*"
+                }
+            },
+            "ProductTypes": {
+                "operations": {
+                    "ProductTypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/ProductTypes/GetActiveProductTypesList"
+                        },
+                        "processing_options": {
+                            "output_field": "*",
+                            "stringArrayColumnName": "Name"
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "Name",
+                "resources": {
+                    "Name": "string*"
+                }
+            },
+            "Sites": {
+                "operations": {
+                    "SitesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/Sites/GetActiveSitesList"
+                        },
+                        "processing_options": {
+                            "output_field": "*",
+                            "stringArrayColumnName": "Name"
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "Name",
+                "resources": {
+                    "Name": "string*"
+                }
+            },
+            "SiteTypes": {
+                "operations": {
+                    "SiteTypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/SiteTypes/GetActiveSiteTypesList"
+                        },
+                        "processing_options": {
+                            "output_field": "*",
+                            "stringArrayColumnName": "Name"
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "Name",
+                "resources": {
+                    "Name": "string*"
+                }
+            },
+            "Tags": {
+                "operations": {
+                    "TagsList": {
+                        "method": "get",
+                        "verb":"post",
+                        "call": {
+                            "path": "/api/Tag/GetTags"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "Name",
+                "resources": {
+                    "inventoryID": "number*",
+                    "tag": "string*",
+                    "serial": "string*",
+                    "siteUid": "number*",
+                    "siteID": "string*",
+                    "siteName": "string*",
+                    "entityID": "string*",
+                    "entityUID": "number*",
+                    "entityTypeID": "number*",
+                    "entityName": "string*",
+                    "statusID": "number*",
+                    "statusDesc": "string*",
+                    "itemID": "number*",
+                    "itemName": "string*",
+                    "itemTypeID": "number*",
+                    "itemTypeName": "string*",
+                    "manufacturerID": "number*",
+                    "manufacturerName": "string*",
+                    "modelNumber": "string*",
+                    "fundingSourceID": "number*",
+                    "fundingSource": "string*",
+                    "vendorID": "number*",
+                    "vendorName": "string*",
+                    "purchaseDate": "datetime*",
+                    "purchasePrice": "number*",
+                    "archiveID": "number*",
+                    "archiveDate": "datetime*",
+                    "roomForTicket": "string*",
+                    "customTagField1": "string*",
+                    "customTagField2": "string*",
+                    "customTagField3": "string*",
+                    "customTagField4": "string*"
+                }
+            },
+            "Vendors": {
+                "operations": {
+                    "VendorsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/Integrations/Vendors/GetAllVendors"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {
+                        }
+                    }
+                },
+                "parameters": {},
+                "key": "vendorID",
+                "resources": {
+                    "vendorID": "number*",
+                    "vendorName": "string*",
+                    "contact": "string*",
+                    "address1": "string*",
+                    "address2": "string*",
+                    "city": "string*",
+                    "state": "string*",
+                    "zipCode": "string*",
+                    "phone": "string*",
+                    "fax": "string*",
+                    "email": "string*",
+                    "accountNumber": "string*",
+                    "notes": "string*"
+                }
+            }
+        }
+    },
+    "rest": {
+        "config": {
+            "baseUrl": "https://{tenant_id}/tipwebapi",
+            "get": {
+                "query_parameters": {
+                }
+            },
+            "authentication": "custom_post_token",
+            "call_handling": "generic",
+            "test_connection": {
+                "url": "/api/Home"
+            }
+        },
+        "authOptions": {
+            "authUrl": "https://{tenant_id}/tipwebapi/api/Login/Validate",
+            "postData": {
+                "Key": "{user_name}",
+                "Phrase": "{password}"
+            },
+            "directToken": true,
+            "tokenPath": "token",
+            "headerName": "Authorization",
+            "headerTemplate": "Bearer {token}"
+        }
+    },
+    "connection": {
+        "items": [
+            {
+                "name": "tenant_id",
+                "type": "textbox",
+                "label": "Tenent URL:",
+                "value": "customer.tipwebhss.com"
+            }
+        ]
+    }
+}
