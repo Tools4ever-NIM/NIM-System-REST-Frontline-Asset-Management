@@ -10,7 +10,10 @@
                             "mode": "iteration",
                             "table": "Tags",
                             "iterator": "entityID",
-                            "path": "/api/StaffStudent/GetEntityInformation/{iterator}/{entityTypeId}"
+							"iterator_columns": [
+                                "entityTypeID"
+                            ],
+                            "path": "/api/StaffStudent/GetEntityInformation/{iterator}/{entityTypeID}"
                         },
                         "processing_options": {
                             "output_field": "result"
