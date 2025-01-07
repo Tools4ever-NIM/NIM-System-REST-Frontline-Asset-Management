@@ -1,6 +1,5 @@
 {
     "schema": {
-        "options": {},
         "crud_objects": {
             "Entities": {
                 "operations": {
@@ -17,12 +16,9 @@
                         },
                         "processing_options": {
                             "output_field": "result"
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "entityID",
                 "resources": {
                     "entityID": "string*",
@@ -50,12 +46,9 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "fundingSourceID",
                 "resources": {
                     "fundingSourceID": "string*",
@@ -71,12 +64,9 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "productNumber",
                 "resources": {
                     "productNumber": "string*",
@@ -104,12 +94,9 @@
                         "processing_options": {
                             "output_field": "*",
                             "stringArrayColumnName": "Name"
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "Name",
                 "resources": {
                     "Name": "string*"
@@ -124,15 +111,16 @@
                         },
                         "processing_options": {
                             "output_field": "*",
-                            "stringArrayColumnName": "Name"
-                        },
-                        "query_parameters": {
+                            "keyValue": {
+                                "keyColumnName": "Key",
+                                "valueColumnName": "Name"
+                            }
                         }
                     }
                 },
-                "parameters": {},
-                "key": "Name",
+                "key": "Key",
                 "resources": {
+                    "Key": "string*",
                     "Name": "string*"
                 }
             },
@@ -146,12 +134,9 @@
                         "processing_options": {
                             "output_field": "*",
                             "stringArrayColumnName": "Name"
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "Name",
                 "resources": {
                     "Name": "string*"
@@ -167,12 +152,9 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "Name",
                 "resources": {
                     "inventoryID": "number*",
@@ -218,12 +200,9 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        },
-                        "query_parameters": {
                         }
                     }
                 },
-                "parameters": {},
                 "key": "vendorID",
                 "resources": {
                     "vendorID": "number*",
@@ -247,8 +226,6 @@
         "config": {
             "baseUrl": "https://{tenant_id}/tipwebapi",
             "get": {
-                "query_parameters": {
-                }
             },
             "authentication": "custom_post_token",
             "call_handling": "generic",
@@ -262,10 +239,10 @@
                 "Key": "{user_name}",
                 "Phrase": "{password}"
             },
-            "directToken": true,
             "tokenPath": "token",
             "headerName": "Authorization",
-            "headerTemplate": "Bearer {token}"
+            "headerTemplate": "Bearer {token}",
+            "type": "custom_post_token"
         }
     },
     "connection": {
