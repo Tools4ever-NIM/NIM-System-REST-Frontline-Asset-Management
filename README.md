@@ -1,4 +1,7 @@
 # Frontline Asset Management (Formerly TipWeb)
+
+Read the [Frontline Asset Management integration documentation](https://docs.nimsuite.com/en/integrations/frontline-asset-management) for connector details and related guides.
+
 <img src="https://github.com/Tools4ever-NIM/NIM-System-REST-Frontline-Asset-Management/assets/24281600/9d567a09-6f42-4eef-9148-14378b2c4bdc" width="256px" />
 
 
